@@ -10,18 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace TabsExample.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Tab1 : ContentPage
+    public partial class NavigationItem : ContentPage
     {
-        public Tab1()
+        public NavigationItem()
         {
             InitializeComponent();
-        }
-
-        private void btnNavigation_Clicked(object sender, EventArgs e)
-        {
-            Page p = new NavigationItem();
-            p.Title = "Navigation Item 1";
-            this.Navigation.PushAsync(p);
         }
     }
 }

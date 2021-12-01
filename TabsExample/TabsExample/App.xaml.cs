@@ -9,8 +9,8 @@ namespace TabsExample
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Views.MainTab());
+            
         }
 
         protected override void OnStart()

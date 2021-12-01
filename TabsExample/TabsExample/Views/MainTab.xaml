@@ -7,12 +7,19 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.BarItemColor="Black"
-            android:TabbedPage.BarSelectedItemColor="Red">
+            android:TabbedPage.BarSelectedItemColor="Red"
+            Title="Tabs Example">
     
   <!--Pages can be added as references or inline-->
-    <local:Tab1 Title="Tab 1">
-        
+    <local:Tab1 Title="Clock">
+        <local:Tab1.IconImageSource>
+            <FontImageSource FontFamily="MyRegularFonts" Glyph="{x:Static fonts:IconRegularFonts.Clock}"/>
+        </local:Tab1.IconImageSource>    
     </local:Tab1>
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
+    <local:Tab2 Title="Blog">
+        <local:Tab2.IconImageSource>
+            <FontImageSource FontFamily="MySolidFonts" Glyph="{x:Static fonts:IconSolidFonts.Blog}"/>
+        </local:Tab2.IconImageSource>
+    </local:Tab2>
+    
 </TabbedPage>
