@@ -4,21 +4,33 @@
             xmlns:fonts="clr-namespace:Fonts"
             xmlns:local="clr-namespace:TabsExample.Views"
              x:Class="TabsExample.Views.MainTab"
+            xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
+            windows:TabbedPage.HeaderIconsEnabled="true"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
-            android:TabbedPage.BarItemColor="Black"
-            android:TabbedPage.BarSelectedItemColor="Red"
-            Title="Tabs Example">
+            Title="Tabs Example"
+            SelectedTabColor="Red"
+            UnselectedTabColor="Black"
+            >
     
   <!--Pages can be added as references or inline-->
+    
+    <windows:TabbedPage.HeaderIconsSize>
+        <Size>
+            <x:Arguments>
+                <x:Double>48</x:Double>
+                <x:Double>48</x:Double>
+            </x:Arguments>
+        </Size>
+    </windows:TabbedPage.HeaderIconsSize>
     <local:Tab1 Title="Clock">
         <local:Tab1.IconImageSource>
-            <FontImageSource FontFamily="MyRegularFonts" Glyph="{x:Static fonts:IconRegularFonts.Clock}"/>
+            <FontImageSource Color="Black" FontFamily="MyRegularFonts" Glyph="{x:Static fonts:IconRegularFonts.Clock}"/>
         </local:Tab1.IconImageSource>    
     </local:Tab1>
     <local:Tab2 Title="Blog">
         <local:Tab2.IconImageSource>
-            <FontImageSource FontFamily="MySolidFonts" Glyph="{x:Static fonts:IconSolidFonts.Blog}"/>
+            <FontImageSource Color="Black" FontFamily="MySolidFonts" Glyph="{x:Static fonts:IconSolidFonts.Blog}"/>
         </local:Tab2.IconImageSource>
     </local:Tab2>
     

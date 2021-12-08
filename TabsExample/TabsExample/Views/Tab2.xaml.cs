@@ -15,6 +15,8 @@ namespace TabsExample.Views
         public Tab2()
         {
             InitializeComponent();
+            
+            
         }
     }
 }
